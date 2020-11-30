@@ -30,26 +30,26 @@ describe WorksController do
     end
   end
 
-  CATEGORIES = %w(albums books movies)
-  INVALID_CATEGORIES = ["nope", "42", "", "  ", "albumstrailingtext"]
+  # CATEGORIES = %w(albums books movies)
+  # INVALID_CATEGORIES = ["nope", "42", "", "  ", "albumstrailingtext"]
 
-  describe "index" do
-    it "succeeds when there are works" do
-      get works_path
-
-      must_respond_with :success
-    end
-
-    it "succeeds when there are no works" do
-      Work.all do |work|
-        work.destroy
-      end
-
-      get works_path
-
-      must_respond_with :success
-    end
-  end
+  # describe "index" do
+  #   it "succeeds when there are works" do
+  #     get works_path
+  #
+  #     must_respond_with :success
+  #   end
+  #
+  #   it "succeeds when there are no works" do
+  #     Work.all do |work|
+  #       work.destroy
+  #     end
+  #
+  #     get works_path
+  #
+  #     must_respond_with :success
+  #   end
+  # end
 
   describe "new" do
     it "succeeds" do
